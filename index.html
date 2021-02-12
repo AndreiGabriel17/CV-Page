@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CV</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="src/reset.css">
+	<link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+	
+	<div class="grid-container">
+		<div class="header">
+			<div class="name-container">
+				<h1 class="name"> S<span class="acronim">tan </span>A<span class="acronim">ndrei </span>G<span class="acronim">abriel</span> </h1>
+			</div>	
+			<div class="subtitle-container">
+				<h2 class="subtitle"> Resume </h2>
+			</div>
+		</div>
+		<div class="navigation-bar">
+			
+				<button class="button" id="button-home" onclick="addClassNameHome()">Home</button>
+				<button class="button" id="button-about-me" onclick="addClassNameAboutMe()">About Me</button>
+				<button class="button" id="button-resume" onclick="addClassNameResume()">Resume</button>
+				<button class="button" id="button-contact" onclick="addClassNameContact()">Contact</button>
+		</div>
+		
+		<div class="display-content1" id="display-content1">
+			<h1>Container 1</h1>
+			
+		</div>
+		<div class="display-content2" id="display-content2">
+			<h1>Container 2</h1>
+
+		</div>
+		<div class="display-content3" id="display-content3">
+			<h1>Container 3</h1>
+
+		</div>
+		<div class="display-content4" id="display-content4">
+			<h1>Container 4</h1>
+
+		</div>
+
+	</div>
+
+	<script>
+		function removeAnimationClass(){
+			let element1 = document.getElementById("display-content1");
+			let element2 = document.getElementById("display-content2");
+			let element3 = document.getElementById("display-content3");
+			let element4 = document.getElementById("display-content4");
+			element1.classList.remove("display-animation");
+			element2.classList.remove("display-animation");
+			element3.classList.remove("display-animation");
+			element4.classList.remove("display-animation");
+		}
+		function addClassNameHome () {
+			removeAnimationClass()
+			let element = document.getElementById("display-content1");
+			element.classList.add("display-animation");
+		}
+		function addClassNameAboutMe () {
+			removeAnimationClass();
+			let element = document.getElementById("display-content2");
+			element.classList.add("display-animation");
+		}
+		function addClassNameResume () {
+			removeAnimationClass();
+			let element = document.getElementById("display-content3");
+			element.classList.add("display-animation");
+		}
+		function addClassNameContact () {
+			removeAnimationClass();
+			let element = document.getElementById("display-content4");
+			element.classList.add("display-animation");
+		}
+		
+	</script>
+</body>
+</html>
