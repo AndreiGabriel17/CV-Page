@@ -28,7 +28,7 @@ body{
 /* Header */
 
 .header{
-    grid-area: 1 / 2 / 1 / 2;
+    grid-area: 1 / 1 / 1 / 4;
     display: flex;
     flex-direction: column;
     justify-content: center;
