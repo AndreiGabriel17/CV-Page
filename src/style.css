@@ -3,30 +3,33 @@ html{ height: 95%; font-size: 10px; font-family: 'Roboto', sans-serif;}
 *{ box-sizing: border-box;}
 
 body{ height: 100%; background-image: url(/Media/Pagina-Fundal.jpg); background-size:auto; background-position:center; background-repeat: no-repeat;}
-    body::after{ content:""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url(/Media/Pagina-Fundal.jpg); background-color: rgba(0,0,0,0.40); background-size:auto; z-index: -1;}
+    
 
-.clearfix::after { content: ""; clear: both; display: table;}
+.clearfix::after { content:""; clear: both; display: table;}
+    
+.grid-container{ display: grid; grid-template-columns: 15% 70% 15%; grid-template-rows: 20% 70% 5%; margin: 0; height: 100%;}
+    .grid-container::after{ content:""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.40); background-size:auto; z-index: -1;}
 
-.grid-container{ display: grid; grid-template-columns: 20% 70% 10%; grid-template-rows: 20% 70% 5%; margin: 0; height: 100%;}
+@media (max-width:660px){
+    .grid-container{ grid-template-columns: 20% 70% 10%;}
+}
 
 /* Header */
 
 .header{ grid-area: 1 / 1 / 1 / 4; display: flex; justify-content: center; align-items: center;}
 .name-container{ width: 30%; height: 100%; padding-top: 3.5rem;}
     .name{display: block; color:rgba(224, 209, 195, 0.836); text-shadow: 0.5rem 0.5rem 1rem black; font-size: 3.5rem; text-align: center; margin-bottom: 0rem;}
-        .name:hover span{ color:rgba(224, 209, 195, 0.836); font-size: 3.5rem;}
+        .name:hover span{ color:rgba(224, 209, 195, 0.836); font-size: 3.3rem;}
         .acronim{ font-size: 0rem; transition: all 0.4s ease-out;}
 
 @media (max-width:1024px){
     .name{ font-size: 2rem;}
         .name:hover span{ font-size: 2rem; }
-    .subtitle{ font-size: 1.5rem;}
 }
 @media (max-width:375px){
     .name{ font-size: 1.5rem;}
         .name:hover span{ font-size: 1.5rem;}
-        .name-container{ width: 50%;}
-    .subtitle{ color:rgba(224, 209, 195, 0.836); font-size: 1.2rem;}
+        .name-container{ width: 50%;} 
 }
 
 /* Header */
@@ -40,8 +43,13 @@ body{ height: 100%; background-image: url(/Media/Pagina-Fundal.jpg); background-
     .button:active{ border: 0.2rem rgb(224, 209, 195) solid; background:rgba(117, 66, 22, 0.836);}
     .button:not(:last-child){ border-bottom: none; }
 
+@media (max-width:1500px){
+    .button{ width: 40%;height: 9rem; font-size: 1.2rem;}
+    .navigation-bar{ padding-left: 1rem;}
+}
+
 @media (max-width:1024px){
-    .button{height: auto; width: auto;font-size:0.9rem;}
+    .button{ height: auto; width: auto; font-size:0.9rem;}
     .navigation-bar{ padding-left: 1rem;}
 }
 
@@ -85,7 +93,6 @@ body{ height: 100%; background-image: url(/Media/Pagina-Fundal.jpg); background-
 .home{ display: flex; flex-direction: column; align-items: center; justify-content: center;}
     .home div{ width: 30%}
     .home h1, .home h2{ display: block; color:rgba(224, 209, 195, 0.836); text-shadow: 0.5rem 0.5rem 1rem black; font-size: 2rem; text-align: center; margin-top: 0rem;}
-
 /* Home */
 
 /* About me */
@@ -95,12 +102,13 @@ body{ height: 100%; background-image: url(/Media/Pagina-Fundal.jpg); background-
     .about-me-inner-container h3 { font-size: 3.2rem; margin-bottom: 3rem;}
     .about-me-inner-container p { font-size: 2rem; }
 
-@media (max-width: 630px){
-    .about-me h1{ padding-top: 1rem; font-size: 2.4rem; }
-    .about-me-inner-container{ padding-top: 1.5rem; overflow: scroll; flex-direction: column; text-align: center;}
-    .about-me-inner-container > img { width: 20rem; height: 20rem; margin: 0 0 2.5rem 0; }
-    .about-me-inner-container h3 { font-size: 1.4rem; }
-    .about-me-inner-container p { font-size: 1.2rem; margin: 0rem 1rem;}
+@media (max-width: 1024px){
+    .about-me {overflow: scroll;}
+        .about-me h1{ padding-top: 1rem; font-size: 2.4rem; }
+        .about-me-inner-container{ padding-top: 1.5rem; flex-direction: column; text-align: center;}
+        .about-me-inner-container > img { width: 20rem; height: 20rem; margin: 0 0 2.5rem 0; }
+        .about-me-inner-container h3 { font-size: 1.4rem; }
+        .about-me-inner-container p { font-size: 1.2rem; margin: 0rem 1rem 1rem;}
 }
 /* About me */
 
@@ -113,15 +121,15 @@ body{ height: 100%; background-image: url(/Media/Pagina-Fundal.jpg); background-
 
 @media (max-width: 670px), (max-width: 812px) and (orientation: landscape) {
     .my-passions, .my-portofolio{ padding: 1rem 2.5rem; height: auto; overflow: scroll;}
-    .my-passions h1, .my-portofolio h1{ font-size: 2.4rem; font-weight: 500; margin-bottom: 5rem; padding-bottom: 1.5rem;}
+    .my-passions h1, .my-portofolio h1{ font-size: 2.4rem; font-weight: 500; margin-bottom: 3rem; padding-bottom: 1.5rem;}
     .my-passions-inner-container h2, .my-portofolio-inner-container h2 { margin-bottom: 2.5rem; text-align: center; font-size: 1.4rem;}
-    .my-passions p, .my-portofolio p { text-align: center; font-size: 1.2rem; margin-bottom: 4.5rem;}
+    .my-passions p, .my-portofolio p { text-align: center; font-size: 1.2rem; margin-bottom: 2.5rem;}
 }
 /* My Projects and my passions */
 
 /* Footer */
-.footer{ grid-area: 3 / 2 / 4 / 3; font-size: 1.6rem; color: white;}
-    .footer h3{ display: inline-block; margin-bottom: 2rem;font-size: 2.4rem; font-weight: 600;}
-    .footer address{ margin-bottom: 2rem;}
-    .footer a{ display: inline-block;}
+.footer{ grid-area: 3 / 2 / 4 / 3; font-size: 1.0rem; color:rgba(224, 209, 195, 0.836); text-shadow: 0.5rem 0.5rem 1rem black; text-align: center;}
+    .footer h3{ display: inline-block; margin-bottom: 0.5rem;font-size: 1rem; font-weight: 600; }
+    .footer address{ margin-bottom: 0.5rem; display: inline-block; }
+    .footer a{ display: inline-block; color:rgba(224, 209, 195, 0.836); text-shadow: 0.5rem 0.5rem 1rem black;}
 /* Footer */

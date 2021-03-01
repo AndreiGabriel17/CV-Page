@@ -24,8 +24,8 @@
 
 			<button class="button" id="button-home" onclick="addClassNameHome()">Home</button>
 			<button class="button" id="button-about-me" onclick="addClassNameAboutMe()">About Me</button>
-			<button class="button" id="button-resume" onclick="addClassNameResume()">Passions</button>
-			<button class="button" id="button-contact" onclick="addClassNameContact()">Projects</button>
+			<button class="button" id="button-resume" onclick="addClassNamePassions()">Passions</button>
+			<button class="button" id="button-contact" onclick="addClassNameProjects()">Projects</button>
 		</div>
 
 		<div class="display-content1 home " id="display-content1">
@@ -106,10 +106,17 @@
 				</div>
 			</div>
 		</div>
-		
+
 	</div>
 
-	
+	<footer class="footer">
+		<h3> Date Contact: </h3>
+		<address>
+            Calea Rahovei, Nr. 317, Sector 5, Bucuresti, Romania
+        </address>
+		<a href="tel:+4072600000000">+40726022701</a>
+        <a href="mailto:someone@example.com">andrei.gabriel17@gmail.com</a>
+	</footer>
 
 	<script>
 		function removeAnimationClass() {
@@ -123,7 +130,7 @@
 			element4.classList.remove("display-animation");
 		}
 		function addClassNameHome() {
-			removeAnimationClass()
+			removeAnimationClass();
 			let element = document.getElementById("display-content1");
 			element.classList.add("display-animation");
 		}
@@ -132,12 +139,12 @@
 			let element = document.getElementById("display-content2");
 			element.classList.add("display-animation");
 		}
-		function addClassNameResume() {
+		function addClassNamePassions() {
 			removeAnimationClass();
 			let element = document.getElementById("display-content3");
 			element.classList.add("display-animation");
 		}
-		function addClassNameContact() {
+		function addClassNameProjects() {
 			removeAnimationClass();
 			let element = document.getElementById("display-content4");
 			element.classList.add("display-animation");
