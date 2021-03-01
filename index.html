@@ -1,53 +1,118 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>CV</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="src/reset.css">
 	<link rel="stylesheet" href="src/style.css">
 </head>
+
 <body>
-	
+
 	<div class="grid-container">
+
 		<div class="header">
 			<div class="name-container">
-				<h1 class="name"> S<span class="acronim">tan </span>A<span class="acronim">ndrei </span>G<span class="acronim">abriel</span> </h1>
-			</div>	
-			<div class="subtitle-container">
-				<h2 class="subtitle"> Resume </h2>
+				<h1 class="name"> S<span class="acronim">tan </span>A<span class="acronim">ndrei </span>G<span
+						class="acronim">abriel</span> </h1>
 			</div>
 		</div>
 		<div class="navigation-bar">
-			
-				<button class="button" id="button-home" onclick="addClassNameHome()">Home</button>
-				<button class="button" id="button-about-me" onclick="addClassNameAboutMe()">About Me</button>
-				<button class="button" id="button-resume" onclick="addClassNameResume()">Resume</button>
-				<button class="button" id="button-contact" onclick="addClassNameContact()">Contact</button>
+
+			<button class="button" id="button-home" onclick="addClassNameHome()">Home</button>
+			<button class="button" id="button-about-me" onclick="addClassNameAboutMe()">About Me</button>
+			<button class="button" id="button-resume" onclick="addClassNameResume()">Passions</button>
+			<button class="button" id="button-contact" onclick="addClassNameContact()">Projects</button>
+		</div>
+
+		<div class="display-content1 home " id="display-content1">
+			<div>
+				<h1>Stan Andrei Gabriel</h1>
+			</div>
+			<div>
+				<h2 class="subtitle"> Resume </h2>
+			</div>
+		</div>
+
+
+		<div class="display-content2 about-me" id="display-content2">
+			<h1>About me</h1>
+			<div class="about-me-inner-container">
+				<img src="media/logo.png" alt="my picture">
+				<div>
+					<h3>Hello, I'm a Developer!</h3>
+					<p>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <br />
+						when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="display-content3 my-passions" id="display-content3">
+			<h1>Pasiunile Mele!</h1>
+			<div class="grid clearfix my-passions-inner-container">
+				<div class="grid-box box-third">
+					<h2>Pasiunea 1</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <br />
+						when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					</p>
+				</div>
+				<div class="grid-box box-third">
+					<h2>Pasiunea 2</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <br />
+						when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					</p>
+				</div>
+				<div class="grid-box box-third">
+					<h2>Pasiunea 3</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <br />
+						when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="display-content4 my-portofolio" id="display-content4">
+			<h1>Proiectele Mele!</h1>
+			<div class="grid clearfix my-portofolio-inner-container">
+				<div class="grid-box box-third">
+					<h2>Proiect 1</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <br />
+						when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					</p>
+				</div>
+				<div class="grid-box box-third">
+					<h2>Proiect 2</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <br />
+						when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					</p>
+				</div>
+				<div class="grid-box box-third">
+					<h2>Proiect 3</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <br />
+						when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					</p>
+				</div>
+			</div>
 		</div>
 		
-		<div class="display-content1" id="display-content1">
-			<h1>Container 1</h1>
-			
-		</div>
-		<div class="display-content2" id="display-content2">
-			<h1>Container 2</h1>
-
-		</div>
-		<div class="display-content3" id="display-content3">
-			<h1>Container 3</h1>
-
-		</div>
-		<div class="display-content4" id="display-content4">
-			<h1>Container 4</h1>
-
-		</div>
-
 	</div>
 
+	
+
 	<script>
-		function removeAnimationClass(){
+		function removeAnimationClass() {
 			let element1 = document.getElementById("display-content1");
 			let element2 = document.getElementById("display-content2");
 			let element3 = document.getElementById("display-content3");
@@ -57,27 +122,28 @@
 			element3.classList.remove("display-animation");
 			element4.classList.remove("display-animation");
 		}
-		function addClassNameHome () {
+		function addClassNameHome() {
 			removeAnimationClass()
 			let element = document.getElementById("display-content1");
 			element.classList.add("display-animation");
 		}
-		function addClassNameAboutMe () {
+		function addClassNameAboutMe() {
 			removeAnimationClass();
 			let element = document.getElementById("display-content2");
 			element.classList.add("display-animation");
 		}
-		function addClassNameResume () {
+		function addClassNameResume() {
 			removeAnimationClass();
 			let element = document.getElementById("display-content3");
 			element.classList.add("display-animation");
 		}
-		function addClassNameContact () {
+		function addClassNameContact() {
 			removeAnimationClass();
 			let element = document.getElementById("display-content4");
 			element.classList.add("display-animation");
 		}
-		
+
 	</script>
 </body>
+
 </html>
